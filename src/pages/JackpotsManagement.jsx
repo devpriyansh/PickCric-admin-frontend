@@ -59,7 +59,7 @@ const JackpotsManagement = () => {
       try {
         setIsLoading(true);
         // Replace with your actual backend URL/port if needed
-        const response = await fetch('http://localhost:5001/api/getAllJackpots');
+        const response = await fetch('https://pickcric-admin-backend.onrender.com/api/getAllJackpots');
         const result = await response.json();
 
         if (result.success) {

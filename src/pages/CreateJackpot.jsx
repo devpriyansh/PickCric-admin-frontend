@@ -50,7 +50,7 @@ const CreateJackpot = () => {
         setMatchesLoading(true);
         setMatchesError('');
         // Adjust this URL if your matches API is on a different route
-        const response = await fetch('http://localhost:5001/api/matches', {
+        const response = await fetch('https://pickcric-admin-backend.onrender.com/api/matches', {
           signal: controller.signal,
         });
         if (!response.ok) throw new Error('Failed to load matches');
@@ -226,7 +226,7 @@ const CreateJackpot = () => {
         status: 1 // Marks it Live immediately
       }; 
 
-      const response = await fetch('http://localhost:5001/api/create-jackpots', {
+      const response = await fetch('https://pickcric-admin-backend.onrender.com/api/create-jackpots', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
